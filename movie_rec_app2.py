@@ -1,10 +1,4 @@
 import os
-
-os.environ["OPENAI_API_KEY"] = "api_key"
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
-#Note: If running protobuf > 3.20.x, attempt to set this environment variable, as the Pinecone clients
-#may not import otherwise. If this doesn't work, downgrade protobuf to 3.20.x or lower and run rest of script.
-
 import pinecone
 from langchain.vectorstores import Pinecone
 from langchain.chat_models import ChatOpenAI
@@ -12,6 +6,11 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 import streamlit as st
+
+os.environ["OPENAI_API_KEY"] = "api_key"
+#os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+#Note: If running protobuf > 3.20.x, you may want to attempt to set this environment variable after importing the os library,
+#as the Pinecone clients may not import otherwise. If this doesn't work, downgrade protobuf to 3.20.x or lower and run rest of script.
 
 embeddings = OpenAIEmbeddings()
 
