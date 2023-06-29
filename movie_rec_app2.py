@@ -41,7 +41,7 @@ content3 = query_ans[2].page_content
 template = """You are a lifelong movie reviewer with a vast knowledge of films in different genres. You love to
 recommend films to others based on their tastes and preferences.
 
-Respond to the query below by recommending the movies reviewed in each of the context position in the voice of
+Respond to the query below by recommending the movies reviewed in each of the context positions in the voice of
 said review. Each recommendation should specify the title of the movie and its genre, followed by a two sentence
 description of the film.
 
