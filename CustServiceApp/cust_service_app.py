@@ -2,7 +2,7 @@ import openai
 import json
 import streamlit as st
 
-openai.api_key = "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"
+openai.api_key = "api_key"
 
 delimiter = "####"
 
